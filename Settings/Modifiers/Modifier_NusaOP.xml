@@ -1,1 +1,40 @@
+<ModifierDefs><List>
+	<Modifier Name="Modifier_NusaOP_Dan_Favor" Type="Normal">
+		<DisplayName>Restu Sekte</DisplayName>
+		<Desc>Efek ringan dari Pil Restu Sekte. Kekuatan utamanya baru bekerja saat pil ditukar ke sekte.</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>600</Duration>
+		<Display>1</Display>
+		<Sync>1</Sync>
+		<Properties>
+			<li Name="MoveSpeed" AddV="1"/>
+		</Properties>
+	</Modifier>
 
+	<!-- Pemicu Pil Naik Ranah: logika ada di Scripts/modifier_nusaop_realm.lua (LuaClassName) -->
+	<Modifier Name="Modifier_NusaOP_Dan_Realm" Type="Normal">
+		<DisplayName>Menembus Ranah</DisplayName>
+		<Desc>Kekuatan pil sedang menembus belenggu ranah.</Desc>
+		<LuaClassName>modifier_nusaop_realm</LuaClassName>
+		<MaxStack>1</MaxStack>
+		<Duration>60</Duration>
+		<Display>1</Display>
+		<Sync>1</Sync>
+	</Modifier>
+
+	<!-- Berkah ruangan dari Cermin Bagua Pembalik Nasib. Pola: SP_FSZhenWu_* bawaan (ClassName Modifier_Zhenwu). -->
+	<Modifier Name="SP_NusaOP_FSZhenWu" Type="New">
+		<DisplayName>Cermin Bagua Pembalik Nasib</DisplayName>
+		<Desc></Desc>
+		<ClassName>Modifier_Zhenwu</ClassName>
+		<MaxStack>1</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<Properties>
+			<li Name="GodPenaltyAddV" AddV="-25"/>
+			<li Name="MindStateBaseValue" AddV="15"/>
+			<li Name="PotentialOfBasepracticeAddValue" AddV="2"/>
+			<li Name="GlobalEfficiency" AddP="0.5"/>
+		</Properties>
+	</Modifier>
+</List></ModifierDefs>
